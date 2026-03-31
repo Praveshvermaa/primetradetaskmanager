@@ -39,3 +39,8 @@ Visit `http://localhost:3000` to view the application.
 ## Testing API Reference
 
 Navigate to `http://localhost:3000/docs` to view the interactive Swagger Documentation UI for the API.
+
+Scalability
+This project is designed to scale horizontally: API routes are stateless and can run behind a load balancer with multiple instances. For performance and cost control, caching (e.g., Redis) can be added for frequently accessed reads and rate-limited endpoints. Background work (e.g., long-running tasks) can be moved to a worker queue, and the database layer can be optimized with indexing and pagination to support higher traffic.
+
+
